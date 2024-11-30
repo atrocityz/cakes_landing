@@ -1,0 +1,8 @@
+@mixin font($size: var(--main-size), $weight: 400, $color: var(--light-color), $style: normal) {
+  font: {
+    size: $size;
+    weight: $weight;
+    style: $style;
+  }
+  color: $color;
+}

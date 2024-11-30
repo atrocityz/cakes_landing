@@ -1,0 +1,17 @@
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --content-width: 1180px;
+  --container-offset: 15px;
+  --offset: 32px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --transition-duration: 0.2s;
+  --header-height: 51px;
+
+  // Размеры шрифта
+  --main-size: 16px;
+
+  // Цвета
+  --light-color: #fff;
+  --dark-color: #000;
+  --accent-color: #2e363e;
+}

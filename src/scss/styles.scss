@@ -1,0 +1,10 @@
+// Подключение основных файлов
+@forward "vars";
+@forward "mixins";
+@forward "functions";
+@forward "fonts";
+@forward "settings";
+
+// Подключение созданых компонентов
+@forward "components/header";
+@forward "components/hero";

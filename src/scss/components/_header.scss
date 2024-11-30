@@ -1,0 +1,114 @@
+@use "../mixins" as *;
+
+.header {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 46px;
+  width: 100%;
+  transform: translateX(-50%);
+
+  @include mobile {
+    flex-direction: column;
+    padding-top: 30px;
+    row-gap: 20px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 143%;
+    color: var(--light-color);
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 21px;
+    }
+  }
+
+  &__column-right {
+    display: flex;
+    column-gap: 80px;
+    align-items: center;
+
+    @include small-tablet {
+      column-gap: 15px;
+    }
+
+    @include small-mobile {
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+
+  &__address {
+    display: flex;
+    column-gap: 12px;
+    align-items: start;
+    justify-content: start;
+
+    &-content {
+      max-width: 150px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: var(--light-color);
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 17px;
+      height: 23px;
+      background: url("../img/svg/address-icon.svg") center/contain no-repeat;
+    }
+
+    @include small-tablet {
+      column-gap: 8px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    column-gap: 12px;
+    align-items: start;
+
+    &-tel {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 152%;
+      color: var(--light-color);
+
+      @include small-tablet {
+        font-size: 16px;
+      }
+    }
+
+    &-daily {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 150%;
+      color: var(--light-color);
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      margin-top: 5px;
+      width: 19px;
+      height: 19px;
+      background: url("../img/svg/phone-icon.svg") center/contain no-repeat;
+    }
+
+    @include small-tablet {
+      column-gap: 8px;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@use "../functions" as *;
+@use "../mixins" as *;
+
+.hero {
+  background: url("../img/hero-bg.png") center/cover no-repeat;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 307px;
+    padding-bottom: min(24.21vw, 465px);
+    min-height: 1234px;
+
+    @include tablet {
+      padding-top: 250px;
+      min-height: 1000px;
+    }
+
+    @include small-tablet {
+      min-height: 100px;
+    }
+  }
+
+  &__title {
+    max-width: 647px;
+  }
+
+  &__descr {
+    margin-bottom: 40px;
+    max-width: 540px;
+    font-weight: 400;
+    line-height: 143%;
+    color: var(--light-color);
+
+    @include fluid-text(24, 16);
+
+    @include small-tablet {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__button-wrapper {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: start;
+      row-gap: 20px;
+    }
+  }
+
+  &__button-descr {
+    max-width: 150px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: var(--light-color);
+
+    @include small-tablet {
+      color: #fed84c;
+    }
+  }
+}
