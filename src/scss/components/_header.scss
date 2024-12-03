@@ -84,6 +84,11 @@
       font-size: 20px;
       line-height: 152%;
       color: var(--light-color);
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: var(--accent-color);
+      }
 
       @include small-tablet {
         font-size: 16px;
