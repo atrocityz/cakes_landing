@@ -14,7 +14,7 @@
 
     @include tablet {
       padding-top: 250px;
-      min-height: 1000px;
+      min-height: 920px;
     }
 
     @include small-tablet {
@@ -48,7 +48,6 @@
     @include small-tablet {
       flex-direction: column;
       align-items: start;
-      row-gap: 20px;
     }
   }
 
@@ -60,7 +59,7 @@
     color: var(--light-color);
 
     @include small-tablet {
-      color: #fed84c;
+      display: none;
     }
   }
 }
