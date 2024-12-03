@@ -23,7 +23,34 @@
   }
 
   &__item {
+    position: relative;
     grid-column: 4 span;
+
+    &:first-child::before {
+      content: "";
+      position: absolute;
+      left: -100px;
+      top: 125px;
+      width: 170px;
+      height: 174px;
+      background: url("../img/berry-img.png") center/contain no-repeat;
+      transform: rotate(64deg);
+
+      @include small-tablet {
+        top: 80px;
+      }
+    }
+
+    &:nth-child(6)::before {
+      content: "";
+      position: absolute;
+      right: -100px;
+      top: 250px;
+      width: 161px;
+      height: 167px;
+      background: url("../img/leaf-img.png") center/contain no-repeat;
+      transform: rotate(180deg);
+    }
 
     @include tablet {
       display: flex;
