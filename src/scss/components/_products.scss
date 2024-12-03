@@ -1,0 +1,104 @@
+@use "../mixins" as *;
+
+.products {
+  &__title {
+    margin-bottom: 80px;
+    text-align: center;
+
+    @include small-tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    gap: 20px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    grid-column: 4 span;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      align-items: flex-start;
+      grid-column: 1 span;
+      margin: 0 auto;
+      width: 300px;
+    }
+
+    &-content {
+      padding-left: 44px;
+      padding-block: 50px;
+
+      @include tablet {
+        padding-left: 0;
+        padding-block: 25px;
+      }
+
+      @include mobile {
+        padding-block: 15px;
+      }
+
+      &_title {
+        margin-bottom: 12px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 143%;
+        color: var(--accent-color);
+
+        @include small-tablet {
+          margin-bottom: 10px;
+        }
+      }
+
+      &_descr {
+        max-width: 240px;
+        font-weight: 400;
+        font-size: var(--main-color);
+        line-height: 150%;
+        color: var(--accent-color);
+
+        &:not(:last-child) {
+          margin-bottom: 24px;
+
+          @include small-tablet {
+            margin-bottom: 14px;
+          }
+
+          @include mobile {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      &_price {
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 150%;
+        color: #434b53;
+
+        @include small-tablet {
+          margin-bottom: 10px;
+        }
+
+        @include mobile {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

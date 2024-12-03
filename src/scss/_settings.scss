@@ -91,7 +91,7 @@ a {
   font-weight: 500;
   line-height: 125%;
   letter-spacing: -0.02em;
-  color: var(--light-color);
+  color: var(--dark-color);
 
   @include fluid-text(48, 24);
 }
@@ -107,6 +107,10 @@ a {
   text-transform: uppercase;
   color: var(--accent-color);
   background: #f2f6fa;
+}
+
+button {
+  border: none;
 }
 
 .btn {
@@ -132,4 +136,13 @@ a {
 
 .btn--small {
   padding: 20px 40px;
+
+  @include small-tablet {
+    padding: 15px 20px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
