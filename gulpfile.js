@@ -40,7 +40,7 @@ const watcher = () => {
   gulp.watch(app.paths.srcSvg, svgSprites);
 };
 
-const dev = gulp.series(clean, htmlInclude, scripts, styles, resources, images, webpImages, watcher);
+const dev = gulp.series(clean, htmlInclude, scripts, styles, resources, images, /*webpImages*/ watcher);
 const build = gulp.series(
   clean,
   htmlInclude,
@@ -48,8 +48,8 @@ const build = gulp.series(
   stylesMinify,
   resources,
   images,
-  webpImages
-  // htmlMinify
+  // webpImages
+  htmlMinify
 );
 const cache = gulp.series(cacheTask, rewrite);
 const cleanFiles = clean;
