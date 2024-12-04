@@ -40,6 +40,10 @@
       @include small-tablet {
         top: 80px;
       }
+
+      @include small-mobile {
+        top: 50px;
+      }
     }
 
     &:nth-child(6)::before {
@@ -67,6 +71,10 @@
       width: 300px;
     }
 
+    @include small-mobile {
+      width: 250px;
+    }
+
     &-content {
       padding-left: 44px;
       padding-block: 50px;
@@ -83,9 +91,10 @@
       &_title {
         margin-bottom: 12px;
         font-weight: 700;
-        font-size: 24px;
         line-height: 143%;
         color: var(--accent-color);
+
+        @include fluid-text(24, 20);
 
         @include small-tablet {
           margin-bottom: 10px;
@@ -115,9 +124,10 @@
       &_price {
         margin-bottom: 20px;
         font-weight: 500;
-        font-size: 24px;
         line-height: 150%;
         color: #434b53;
+
+        @include fluid-text(24, 20);
 
         @include small-tablet {
           margin-bottom: 10px;

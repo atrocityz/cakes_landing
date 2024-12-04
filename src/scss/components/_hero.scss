@@ -25,18 +25,25 @@
   }
 
   &__title {
-    max-width: 647px;
+    max-width: min(14.13em, 540px);
     color: var(--light-color);
+
+    @include tablet {
+    }
   }
 
   &__descr {
     margin-bottom: 40px;
-    max-width: 540px;
+    max-width: min(27.12em, 540px);
     font-weight: 400;
     line-height: 143%;
     color: var(--light-color);
 
     @include fluid-text(24, 16);
+
+    @include tablet {
+      max-width: min(20.83rem, 400px);
+    }
 
     @include small-tablet {
       margin-bottom: 25px;
