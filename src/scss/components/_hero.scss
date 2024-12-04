@@ -25,11 +25,8 @@
   }
 
   &__title {
-    max-width: min(14.13em, 540px);
+    max-width: min(14.13em, 580px);
     color: var(--light-color);
-
-    @include tablet {
-    }
   }
 
   &__descr {
