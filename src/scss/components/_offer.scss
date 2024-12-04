@@ -1,0 +1,67 @@
+@use "../mixins" as *;
+
+.offer {
+  display: flex;
+  align-items: center;
+  min-height: 1334px;
+  background: url("../img/offer-bg.png") center/cover no-repeat;
+
+  @include tablet {
+    min-height: 920px;
+  }
+
+  @include small-tablet {
+    min-height: 700px;
+  }
+
+  @include mobile {
+    min-height: 600px;
+    background-position-x: -270px;
+  }
+
+  @include small-mobile {
+    background-position-x: -320px;
+  }
+
+  &__content {
+    grid-column: 8 / 5 span;
+
+    @include small-tablet {
+      grid-column: 7 / 6 span;
+    }
+
+    @include mobile {
+      grid-column: 5 / 8 span;
+    }
+
+    @include small-mobile {
+      grid-column: 4 / 9 span;
+      padding-left: 20px;
+    }
+  }
+
+  &__title-alert {
+    max-width: 226px;
+
+    @include mobile {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    color: var(--light-color);
+
+    @include mobile {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 40px;
+    color: var(--light-color);
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+}
