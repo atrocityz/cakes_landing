@@ -25,7 +25,9 @@
   &__item {
     position: relative;
     grid-column: 4 span;
-    border-radius: 20px;
+    border: 1px solid #f2f6fa;
+    border-radius: 10px;
+    box-shadow: 2px 8px 16px 0 rgba(194, 198, 208, 0.06);
 
     &:first-child::before {
       content: "";
@@ -80,12 +82,12 @@
       padding-block: 50px;
 
       @include tablet {
-        padding-left: 0;
+        padding-left: 15px;
         padding-block: 25px;
       }
 
       @include mobile {
-        padding-block: 15px;
+        padding: 15px 10px;
       }
 
       &_title {
