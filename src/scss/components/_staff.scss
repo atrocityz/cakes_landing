@@ -1,0 +1,144 @@
+@use "../mixins" as *;
+
+.staff {
+  &__wrapper {
+    column-gap: 9px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__content {
+    grid-column: 6 span;
+    padding-block: 97px;
+
+    @include small-tablet {
+      padding-block: 50px;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-block: 20px;
+    }
+  }
+
+  &__person {
+    position: relative;
+    display: flex;
+    align-items: center;
+    grid-column: 6 span;
+
+    &-badge {
+      position: absolute;
+      left: -5em;
+      bottom: 11em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include tablet {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @include mobile {
+        bottom: 0;
+      }
+
+      &_name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 287px;
+        height: 60px;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        color: var(--light-color);
+        background: url("../img/badge-bg-1.png") center/contain no-repeat;
+
+        @include fluid-text(24, 18);
+
+        @include small-tablet {
+          width: 220px;
+          height: 45px;
+        }
+      }
+
+      &_specialty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 218px;
+        height: 52px;
+        font-family: var(--font-family);
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent-color);
+        background: url("../img/badge-bg-2.png") center/contain no-repeat;
+
+        @include fluid-text(18, 14);
+
+        @include small-tablet {
+          width: 180px;
+          height: 40px;
+        }
+      }
+    }
+
+    &-photo {
+      @include mobile {
+        margin: auto;
+        width: 300px;
+      }
+    }
+  }
+
+  &__title-alert {
+    max-width: 191px;
+  }
+
+  &__title {
+    margin-bottom: 36px;
+    max-width: 520px;
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    max-width: 438px;
+    row-gap: 30px;
+
+    @include small-tablet {
+      margin-bottom: 25px;
+      row-gap: 15px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+
+    &-item {
+      list-style-type: none;
+      list-style-image: url("../img/svg/bullet-icon.svg");
+      font-weight: 400;
+      line-height: 150%;
+      color: var(--accent-color);
+
+      @include fluid-text(18, 16);
+    }
+  }
+}

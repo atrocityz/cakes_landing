@@ -98,6 +98,10 @@ a {
   color: var(--dark-color);
 
   @include fluid-text(48, 20);
+
+  @include small-tablet {
+    margin-bottom: 20px;
+  }
 }
 
 .title-alert {
@@ -111,6 +115,10 @@ a {
   text-transform: uppercase;
   color: var(--accent-color);
   background: #f2f6fa;
+
+  @include small-tablet {
+    margin-bottom: 15px;
+  }
 }
 
 button {
