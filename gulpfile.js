@@ -32,6 +32,7 @@ const watcher = () => {
   });
 
   gulp.watch(app.paths.srcScss, styles);
+  gulp.watch(app.paths.srcFullJs, scripts);
   gulp.watch(`${app.paths.srcBlocksFolder}/*.html`, htmlInclude);
   gulp.watch(`${app.paths.base.src}/*.html`, htmlInclude);
   gulp.watch(`${app.paths.resourcesFolder}/**`, resources);

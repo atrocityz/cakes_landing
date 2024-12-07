@@ -52,6 +52,7 @@
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-order": "^6.0.4",
     "stylelint-scss": "^6.9.0",
+    "swiper": "^11.1.15",
     "webpack-stream": "^7.0.0"
   }
 }

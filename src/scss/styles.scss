@@ -6,8 +6,14 @@
 @forward "settings";
 
 // Подключение созданых компонентов
+@forward "components/btn";
+@forward "components/title";
+@forward "components/swiper";
+@forward "components/clouds";
 @forward "components/header";
 @forward "components/hero";
 @forward "components/products";
 @forward "components/offer";
 @forward "components/staff";
+@forward "components/reviews";
+@forward "components/review";

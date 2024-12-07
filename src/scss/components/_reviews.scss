@@ -1,0 +1,40 @@
+.reviews {
+  position: relative;
+  background-color: var(--section-main-color);
+
+  &__berry {
+    position: absolute;
+    right: 275px;
+    top: 407px;
+    z-index: 2;
+    width: 152px;
+    height: 156px;
+    object-fit: cover;
+  }
+
+  &__leaf {
+    position: absolute;
+    left: 192px;
+    top: 270px;
+    width: 126px;
+    height: 131px;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__container {
+    padding-bottom: 24px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__swiper {
+    margin-bottom: 70px;
+  }
+}

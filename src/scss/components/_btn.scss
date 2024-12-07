@@ -1,0 +1,30 @@
+@use "../mixins" as *;
+
+.btn {
+  border-radius: 8px;
+  padding: 30px 50px;
+  font-weight: 500;
+  line-height: 152%;
+  color: var(--accent-color);
+  background-color: #fed84c;
+  transition-duration: var(--transition-duration);
+
+  @include fluid-text(18, 14);
+
+  &:hover {
+    background-color: #bb9e37;
+    cursor: pointer;
+  }
+
+  @include small-tablet {
+    padding: 15px 30px;
+  }
+}
+
+.btn--small {
+  padding: 20px 40px;
+
+  @include small-tablet {
+    padding: 15px 20px;
+  }
+}

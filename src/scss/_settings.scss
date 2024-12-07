@@ -90,68 +90,8 @@ a {
   position: relative;
 }
 
-.title {
-  margin-bottom: 24px;
-  font-weight: 500;
-  line-height: 125%;
-  letter-spacing: -0.02em;
-  color: var(--dark-color);
-
-  @include fluid-text(48, 20);
-
-  @include small-tablet {
-    margin-bottom: 20px;
-  }
-}
-
-.title-alert {
-  margin-bottom: 24px;
-  border-radius: 5px;
-  padding: 10px 18px;
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 150%;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent-color);
-  background: #f2f6fa;
-
-  @include small-tablet {
-    margin-bottom: 15px;
-  }
-}
-
 button {
   border: none;
-}
-
-.btn {
-  border-radius: 8px;
-  padding: 30px 50px;
-  font-weight: 500;
-  line-height: 152%;
-  color: var(--accent-color);
-  background-color: #fed84c;
-  transition-duration: var(--transition-duration);
-
-  @include fluid-text(18, 14);
-
-  &:hover {
-    background-color: #bb9e37;
-    cursor: pointer;
-  }
-
-  @include small-tablet {
-    padding: 15px 30px;
-  }
-}
-
-.btn--small {
-  padding: 20px 40px;
-
-  @include small-tablet {
-    padding: 15px 20px;
-  }
 }
 
 .grid {

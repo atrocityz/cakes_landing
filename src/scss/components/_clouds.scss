@@ -1,0 +1,16 @@
+.clouds {
+  position: relative;
+  width: 100%;
+
+  &__image {
+    margin: 0 auto;
+  }
+}
+
+.clouds--upper {
+  top: -1px;
+}
+
+.clouds--lower {
+  bottom: -1px;
+}
