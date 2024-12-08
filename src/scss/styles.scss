@@ -8,8 +8,11 @@
 // Подключение созданых компонентов
 @forward "components/btn";
 @forward "components/title";
+@forward "components/form";
+@forward "components/checkbox";
 @forward "components/swiper";
 @forward "components/clouds";
+@forward "components/copyrights";
 @forward "components/header";
 @forward "components/hero";
 @forward "components/products";
@@ -18,3 +21,4 @@
 @forward "components/reviews";
 @forward "components/review";
 @forward "components/orders";
+@forward "components/footer";

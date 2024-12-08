@@ -1,0 +1,129 @@
+@use "../mixins" as *;
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 80px;
+  background-color: var(--section-main-color);
+
+  @include big-desktop {
+    padding-bottom: 40px;
+  }
+
+  @include tablet {
+    padding-bottom: 20px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+    border-radius: 8px;
+    padding: min(3.64vw, 70px) min(7.81vw, 150px);
+    text-align: center;
+    background-color: var(--light-color);
+
+    @include big-desktop {
+      margin-bottom: 40px;
+      max-width: 1000px;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    line-height: 1.33;
+    color: var(--accent-color);
+
+    @include fluid-text(36, 20);
+  }
+
+  &__descr {
+    margin-bottom: 36px;
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: var(--accent-color);
+
+    @include fluid-text(21, 18);
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    gap: 43px;
+
+    @include small-tablet {
+      margin-bottom: 15px;
+      gap: 10px;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    color: #7e868e;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__leaf {
+    position: absolute;
+    left: 150px;
+    top: 180px;
+    z-index: 1;
+    transform: rotate(25deg);
+  }
+
+  &__leaf-right {
+    position: absolute;
+    right: 150px;
+    bottom: 150px;
+    z-index: 1;
+    transform: rotate(25deg);
+  }
+
+  &__berry {
+    position: absolute;
+    left: 100px;
+    bottom: 120px;
+    z-index: 1;
+  }
+
+  &__berry-right {
+    position: absolute;
+    right: 130px;
+    top: 180px;
+    z-index: 1;
+    transform: rotate(90deg);
+  }
+
+  &__berry-right,
+  &__berry,
+  &__leaf-right,
+  &__leaf {
+    @include big-desktop {
+      display: none;
+    }
+  }
+}

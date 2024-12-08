@@ -1,0 +1,67 @@
+@use "../mixins" as *;
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+  width: 100%;
+  gap: 20px;
+
+  @include small-tablet {
+    margin-bottom: 20px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__input {
+    border-radius: 8px;
+    padding: 16px 46px;
+    width: 100%;
+    height: 86px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-image: url("../img/svg/phone-icon-gray.svg");
+    background-position: 20px center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-color: #f2f6fa;
+
+    @include mobile {
+      height: 52px;
+    }
+
+    &::placeholder {
+      color: #7e868e;
+    }
+  }
+
+  &__btn {
+    border-radius: 8px;
+    padding: 30px 50px;
+    width: 50%;
+    font-weight: 500;
+    line-height: 152%;
+    color: var(--accent-color);
+    background-color: #fed84c;
+    transition-duration: var(--transition-duration);
+
+    @include fluid-text(18, 14);
+
+    &:hover {
+      background-color: #bb9e37;
+      cursor: pointer;
+    }
+
+    @include mobile {
+      padding: 15px 10px;
+      width: 100%;
+      max-width: 160px;
+    }
+  }
+}
