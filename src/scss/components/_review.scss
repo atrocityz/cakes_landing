@@ -1,20 +1,46 @@
+@use "../mixins" as *;
+
 .review {
   &__wrapper {
     display: flex;
+    margin: clamp(30px, 3.65vw, 70px) 15px;
+    gap: min(2.81vw, 54px);
+
+    @include big-desktop {
+      margin: 30px 15px;
+    }
+
+    @include tablet {
+      flex-direction: column-reverse;
+      padding: 10px;
+      gap: 10px;
+    }
   }
 
   &__text {
     display: flex;
     flex-direction: column;
-    padding-top: 64px;
-    row-gap: 24px;
+    padding-top: clamp(15px, 2.6vw, 50px);
+    max-width: 460px;
+    row-gap: clamp(5px, 1.25vw, 24px);
+
+    @include tablet {
+      padding-top: 0;
+      max-width: 100%;
+      row-gap: 5px;
+    }
   }
 
   &__title {
     font-weight: 500;
-    font-size: 30px;
     line-height: 1.43;
     color: var(--accent-color);
+
+    @include fluid-text(30, 16);
+
+    @include tablet {
+      text-align: center;
+    }
   }
 
   &__descr {
@@ -23,38 +49,77 @@
     font-size: 15px;
     line-height: 1.7;
     color: var(--accent-color);
+
+    @include tablet {
+      max-width: 100%;
+      font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 13px;
+    }
   }
 
   &__more-link {
     border-bottom: 1px dashed #4a94ff;
     max-width: 179px;
     font-weight: 400;
-    font-size: 14px;
     line-height: 1.5;
     color: #4a94ff;
+
+    @include fluid-text(14, 13);
   }
 
   &__person {
     display: flex;
+    flex-grow: 1;
     flex-shrink: 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     gap: 30px;
+
+    @include tablet {
+      gap: 10px;
+    }
+
+    &-image {
+      width: clamp(100px, 19.79vw, 380px);
+
+      @include mobile {
+        max-width: 70px;
+      }
+    }
+
+    &-name {
+      font-weight: 500;
+      line-height: 1.43;
+      color: var(--accent-color);
+
+      @include fluid-text(21, 15);
+    }
+
+    &-location {
+      font-weight: 400;
+      line-height: 1.7;
+      color: #a6aeb6;
+
+      @include fluid-text(16, 13);
+    }
   }
 
   &--quotes-yellow {
     background-image: url("../img/svg/quotes-yellow.svg");
     background-position: left top;
-    background-size: 40px 40px;
+    background-size: clamp(30px, 2.02vw, 40px) clamp(30px, 2.02vw, 40px);
     background-repeat: no-repeat;
   }
 
   &--quotes-cyan {
     background-image: url("../img/svg/quotes-cyan.svg");
     background-position: left top;
-    background-size: 40px 40px;
+    background-size: clamp(30px, 2.02vw, 40px) clamp(30px, 2.02vw, 40px);
     background-repeat: no-repeat;
   }
 }
