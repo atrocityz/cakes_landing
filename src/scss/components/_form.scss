@@ -17,6 +17,16 @@
     gap: 10px;
   }
 
+  &__label {
+    width: 50%;
+    height: 100%;
+
+    @include mobile {
+      width: 100%;
+      max-width: 240px;
+    }
+  }
+
   &__input {
     border-radius: 8px;
     padding: 16px 46px;
