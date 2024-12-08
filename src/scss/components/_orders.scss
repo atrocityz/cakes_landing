@@ -1,0 +1,25 @@
+@use "../mixins" as *;
+
+.orders {
+  &__subtitle {
+    margin-bottom: 80px;
+
+    @include big-desktop {
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
