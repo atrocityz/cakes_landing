@@ -16,6 +16,8 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    max-width: 1920px;
     gap: 9px;
 
     @include mobile {

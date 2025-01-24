@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 340px;
   padding-bottom: 80px;
   background-color: var(--section-main-color);
 
@@ -14,10 +15,12 @@
   }
 
   @include tablet {
+    padding-top: 150px;
     padding-bottom: 20px;
   }
 
   &__content {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,6 +37,10 @@
 
     @include tablet {
       margin-bottom: 20px;
+    }
+
+    @include mobile {
+      padding-block: 30px;
     }
   }
 
@@ -116,14 +123,5 @@
     top: 220px;
     z-index: 1;
     transform: rotate(90deg);
-  }
-
-  &__berry-right,
-  &__berry,
-  &__leaf-right,
-  &__leaf {
-    @media (width <= 1400px) {
-      display: none;
-    }
   }
 }

@@ -5,6 +5,10 @@
   overflow: visible;
   max-width: clamp(550px, 61.45vw, 1180px);
 
+  @include tablet {
+    overflow: hidden;
+  }
+
   @include mobile {
     max-width: 410px;
   }
@@ -26,7 +30,9 @@
     height: auto;
     box-shadow: 2px 8px 16px 0 rgba(194, 198, 208, 0.06);
     background-color: var(--light-color);
+    opacity: 0.5;
     transition: opacity 0.3s ease, scale 0.3s ease;
+    scale: 0.74;
   }
 }
 
@@ -70,8 +76,7 @@
   }
 }
 
-.swiper-slide-next,
-.swiper-slide-prev {
-  opacity: 0.5;
-  scale: 0.74;
+.swiper-slide-active {
+  opacity: 1;
+  scale: 1;
 }

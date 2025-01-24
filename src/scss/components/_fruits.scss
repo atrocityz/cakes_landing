@@ -1,0 +1,104 @@
+@use "../mixins" as *;
+
+.fruits {
+  &--berry {
+    &::before {
+      content: '';
+      position: absolute;
+      left: -10%;
+      top: 80%;
+      width: 167px;
+      height: 171px;
+      background-image: url('../../img/berry-img.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @include tablet {
+        width: 120px;
+        height: 130px;
+      }
+
+      @include small-mobile {
+        top: 85%;
+        width: 60px;
+        height: 100px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -10%;
+      bottom: 80%;
+      width: 167px;
+      height: 171px;
+      background-image: url('../../img/berry-img.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      rotate: 45deg;
+
+      @include tablet {
+        width: 120px;
+        height: 130px;
+      }
+
+      @include small-mobile {
+        bottom: 85%;
+        width: 60px;
+        height: 100px;
+      }
+    }
+  }
+
+  &--leaf {
+    &::before {
+      content: '';
+      position: absolute;
+      left: -5%;
+      bottom: 90%;
+      width: 106px;
+      height: 111px;
+      background-image: url('../../img/leaf-img.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      rotate: -90deg;
+
+      @include tablet {
+        width: 80px;
+        height: 90px;
+      }
+
+      @include small-mobile {
+        width: 60px;
+        height: 70px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -10%;
+      top: 85%;
+      width: 145px;
+      height: 160px;
+      background-image: url('../../img/leaf-img.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      rotate: -100deg;
+
+      @include tablet {
+        width: 100px;
+        height: 120px;
+      }
+
+      @include small-mobile {
+        width: 60px;
+        height: 80px;
+      }
+    }
+  }
+}

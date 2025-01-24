@@ -3,6 +3,11 @@
 .reviews {
   position: relative;
   background-color: var(--section-main-color);
+  padding-block: 330px;
+
+  @include tablet {
+    padding-block: 150px;
+  }
 
   &__berry {
     position: absolute;
@@ -16,6 +21,11 @@
     @include mobile {
       right: 20px;
       top: 110px;
+    }
+
+    @include small-mobile {
+      right: -10px;
+      top: 180px;
     }
   }
 
